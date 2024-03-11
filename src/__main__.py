@@ -13,6 +13,7 @@ data["Withdrawals"] = data["Amount"].apply(lambda x: -x if x < 0 else 0)
 data["Deposits"] = data["Amount"].apply(lambda x: x if x > 0 else 0)
 data["Payee"] = data["Amount"].apply(lambda x: x if x > 0 else 0)
 
+
 headers = [
     "Date",
     "Withdrawals",
@@ -23,6 +24,6 @@ headers = [
 ]
 
 
-data = data[headers]
-data.to_csv("./poo.csv")
+# data = data[headers]
+
 print(data)
