@@ -28,4 +28,4 @@ headers = [
 
 data = data[headers]
 
-data.to_csv("./test.csv")
+data.to_csv("./test.csv", index=False)
