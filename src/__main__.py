@@ -6,12 +6,12 @@ ROOT = Path().cwd()
 
 
 # headers = [
-#     "Date",
-#     "Withdrawals",
-#     "Deposits",
-#     "Payee",
-#     "Description",
-#     "Reference Number",
+#     'Date',
+#     'Withdrawals',
+#     'Deposits',
+#     'Payee',
+#     'Description',
+#     'Reference Number',
 # ]
 
 data = pd.read_csv(
