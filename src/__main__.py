@@ -12,6 +12,8 @@ data.columns = [c.strip() for c in data.columns]
 data["Withdrawals"] = data["Amount"].apply(lambda x: -x if x < 0 else 0)
 data["Deposits"] = data["Amount"].apply(lambda x: x if x > 0 else 0)
 data["Payee"] = data["Amount"].apply(lambda x: x if x > 0 else 0)
+data["Description"] = data["Narrative"]
+data["Reference Number"] = range(len(data))
 
 
 headers = [
@@ -24,6 +26,6 @@ headers = [
 ]
 
 
-# data = data[headers]
+data = data[headers]
 
-print(data)
+data.to_csv("./test.csv")
